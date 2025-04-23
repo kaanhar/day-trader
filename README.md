@@ -1,6 +1,6 @@
 # 🤖 AI Crypto Trading Bot
 
-This is a fully autonomous, self-learning crypto trading bot that uses machine learning, technical indicators, and real-time market data to simulate (and optionally execute) trades on Binance.
+This is a fully autonomous, self-learning crypto trading bot that uses machine learning, technical indicators, and real-time market data to simulate trades on Binance.
 
 ---
 
@@ -9,7 +9,6 @@ This is a fully autonomous, self-learning crypto trading bot that uses machine l
 - ✅ **Self-Learning Loop**: Bot retrains itself hourly based on past trade outcomes.
 - 📈 **Live Market Simulation**: Trades simulated every 10 seconds using live Binance data.
 - 🤖 **AI Model**: XGBoost classifier trained on RSI, EMA, MACD, and Bollinger Bands.
-- 📰 **News Sentiment**: Adjusts confidence using recent crypto news headlines from CryptoPanic.
 - 📉 **Dynamic SL/TP**: Calculates take-profit and stop-loss levels per trade based on market volatility and model confidence.
 - 🔁 **Symbol Selector**: Choose BTC/USDT, ETH/USDT, or SOL/USDT at startup.
 - 📝 **Trade Logging**: All trades are logged to `simulated_trade_log.csv` with full trade stats.
@@ -28,8 +27,8 @@ This is a fully autonomous, self-learning crypto trading bot that uses machine l
 ## 📦 Installation
 
 ```bash
-git clone https://github.com/your-username/ai-trading-bot
-cd ai-trading-bot
+git clone https://github.com/kaanhar/day-trader
+cd day-trader
 pip install -r requirements.txt
 ```
 
@@ -71,26 +70,3 @@ LIVE_MODE = False  # Set to True to use real Binance orders (not recommended for
 - All simulated trades are saved in `simulated_trade_log.csv`
 - Each trade includes entry/exit prices, confidence, indicators, TP/SL, and final profit.
 
----
-
-## 🔐 Optional: Enable Real Trading (NOT recommended without safeguards)
-
-Set your Binance API keys as environment variables:
-
-```bash
-export BINANCE_API_KEY=your_key
-export BINANCE_API_SECRET=your_secret
-```
-
-Then set `LIVE_MODE = True` in the script to execute real trades.
-
-⚠️ Use at your own risk. Start small. Test thoroughly.
-
----
-
-## 📅 Coming Soon Ideas
-
-- Web-based dashboard to monitor trades live
-- Strategy switching and multi-symbol learning
-- Discord/Telegram alerts
-- Backtesting module
