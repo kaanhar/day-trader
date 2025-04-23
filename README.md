@@ -1,4 +1,4 @@
-# 🤖 AI Crypto Trading Bot
+# Best Way to burn your money
 
 This is a fully autonomous, self-learning crypto trading bot that uses machine learning, technical indicators, and real-time market data to simulate trades on Binance.
 
